@@ -19,8 +19,16 @@ class Usuario
 
     private $DataCadastro;
 
-
-
+    public function Usuario($Login, $Senha, $Nome, $Sobrenome, $DataNascimento, $Escolaridade, $Profissao)
+    {
+        $this->Login = $Login;
+        $this->Senha = $Senha;
+        $this->Nome = $Nome;
+        $this->Sobrenome = $Sobrenome;
+        $this->DataNascimento;
+        $this->Escolaridade = $Escolaridade;
+        $this->Profissao = $Profissao;
+    }
     
     public function getLogin()
     {
