@@ -1,5 +1,6 @@
 <?php
-
+class UsuarioRepositorio
+{
     function Cadastrar(Usuario $usuario)
     {
         $conexao = new mysqli("localhost", "root", "", "dbphp7");
@@ -16,14 +17,16 @@
     function VerificarCredenciais($login, $senha)
     {
         $conexao = new mysqli("localhost", "root", "", "dbphp7");
-            $result = $conexao->query("SELECT * FROM Usuarios where Login = $login and Senha = $senha;");
+            $result = $conexao->query("SELECT * FROM Usuarios where Login = '$login' and Senha = '$senha';");
                // $result->bind_param("ss", $login, $senha); 
-               if ($result != Null) 
+               if ($result != false) 
                {
                    # code...
                }
 
     }
+}
+    
 
 
 

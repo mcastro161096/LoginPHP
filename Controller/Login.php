@@ -1,9 +1,10 @@
 <?php
 include('../index.php');
-
+include('../Repositorio/UsuariosRepositorio.php');
 $dados = $_POST;
+$usuarioRepositorio = new UsuarioRepositorio();
 
-VerificarCredenciais($dados['email'], $dados['senha']);
+$usuarioRepositorio->VerificarCredenciais($dados['email'], $dados['senha']);
 
 
 ?>
