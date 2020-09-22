@@ -17,12 +17,27 @@ class UsuarioRepositorio
     function VerificarCredenciais($login, $senha)
     {
         $conexao = new mysqli("localhost", "root", "", "dbphp7");
-            $result = $conexao->query("SELECT * FROM Usuarios where Login = '$login' and Senha = '$senha';");
-               // $result->bind_param("ss", $login, $senha); 
-               if ($result != false) 
-               {
-                   # code...
-               }
+            $result = $conexao->query("SELECT Login, Senha FROM Usuarios where Login = '$login';");
+                $row = $result->fetch_array();  
+
+            if ($row != null) 
+            {
+                    
+                        $loginEncontrado = $row['Login'];
+                        $senhaEncontrada = $row['Senha'];
+                            if ($loginEncontrado == $login) 
+                            {
+                                if ($senhaEncontrada == $senha)
+                                {
+                                   return "valido";
+                                }
+                                return "nao encontrado";
+                            }
+
+                
+            }
+            else
+                return "invalido";
 
     }
 }

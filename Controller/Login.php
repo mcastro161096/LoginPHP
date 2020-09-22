@@ -4,7 +4,19 @@ include('../Repositorio/UsuariosRepositorio.php');
 $dados = $_POST;
 $usuarioRepositorio = new UsuarioRepositorio();
 
-$usuarioRepositorio->VerificarCredenciais($dados['email'], $dados['senha']);
+$usuario = $usuarioRepositorio->VerificarCredenciais($dados['email'], $dados['senha']);
+
+if ($usuario == "valido")
+{
+    # code...
+}
+else
+if ($usuario == "nao encontrado") 
+{
+    echo "Usuario não existe";
+}
+echo "Usuario invalido";
+
 
 
 ?>
