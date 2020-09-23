@@ -7,9 +7,9 @@ class UsuarioRepositorio
             $query = $conexao->prepare("INSERT INTO Usuarios 
                 (Login, Senha, Nome, Sobrenome, DataNascimento, Escolaridade, Profissao) 
                     VALUES (?, ?, ?, ?, ?, ?, ?);");
-                $query->bind_param("sssssss",$usuario->getLogin(),
-                    $usuario->getSenha(), $usuario->getNome(), $usuario->getSobrenome(), $usuario->getDataNascimento(),
-                         $usuario->getEscolaridade(), $usuario->getProfissao());
+                $query->bind_param("sssssss",$usuario->Login,
+                    $usuario->Senha, $usuario->Nome, $usuario->Sobrenome, $usuario->DataNascimento,
+                         $usuario->Escolaridade, $usuario->Profissao);
 
           
           if($query->execute()) 

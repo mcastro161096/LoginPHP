@@ -3,21 +3,21 @@ class Usuario
 {
     private $Id;
 
-    private $Login;
+    public $Login;
 
-    private $Senha;
+    public $Senha;
 
-    private $Nome;
+    public $Nome;
 
-    private $Sobrenome;
+    public $Sobrenome;
 
-    private $DataNascimento;
+    public $DataNascimento;
 
-    private $Escolaridade;
+    public $Escolaridade;
 
-    private $Profissao;
+    public $Profissao;
 
-    private $DataCadastro;
+    public $DataCadastro;
 
     public function __construct( $Nome, $Sobrenome, $DataNascimento, $Escolaridade, $Profissao, $Login, $Senha)
     {

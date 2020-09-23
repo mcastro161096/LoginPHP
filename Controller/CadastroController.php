@@ -1,5 +1,4 @@
 <?php
-include('../View/Cadastro.php');
 include('../View/Login.php');
 include('../Repositorio/UsuariosRepositorio.php');
 include('../Model/UsuarioModel.php');
@@ -13,17 +12,21 @@ $usuarioRepositorio = new UsuarioRepositorio();
 
     if($result == "Salvo com sucesso")
     { 
-        // echo ("<SCRIPT LANGUAGE='JavaScript'>
-        // window.alert('$result')
-        // window.location.href='../View/Cadastro.php';
-        // </SCRIPT>");
+        echo ("<SCRIPT LANGUAGE='JavaScript'>
+        window.alert('$result.  você será redirecionado(a) para efetuar login!')
+        window.location.href='../View/Login.php';
+        </SCRIPT>");
         
         session_destroy();
-        header("Refresh: 0; url=../View/Login.php");
         
     }
     else
-    //header("location:javascript:alert(\" com Sucesso!\");location.href=../View/Login.php;");
+    {
+        echo ("<SCRIPT LANGUAGE='JavaScript'>
+        window.alert('$result')
+        window.location.href='../View/Cadastro.php';
+        </SCRIPT>");
+    }
 
 
 ?>
