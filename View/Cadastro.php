@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 
 
 ?>
@@ -16,7 +16,24 @@
 </head>
 
 <body>
-  
+  <form method="POST" action="/LoginPHP/Controller/LoginController.php">
+
+
+
+
+    <div class="form-group">
+      <div class="input-group">
+        <label>Nome</label>
+        <input type="text" class="form-control input-lg" value="<?php $_SESSION['nome']?>" readonly />
+
+      </div>
+    </div>
+
+
+
+
+
+  </form>
 
 </body>
 <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>

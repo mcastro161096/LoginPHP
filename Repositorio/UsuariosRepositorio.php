@@ -31,15 +31,26 @@ class UsuarioRepositorio
                                 {
                                    return "valido";
                                 }
-                                return "nao encontrado";
+                                return "Usuário ou senha inválidos.";
                             }
 
                 
             }
             else
-                return "invalido";
+                return "Usuário não existe, clique em 'Criar conta'";
 
     }
+
+    function BuscaDadosDoUsuarioLogado($login, $senha)
+    {
+        $conexao = new mysqli("localhost", "root", "", "dbphp7");
+            $result = $conexao->query("SELECT * FROM Usuarios where Login = '$login';");
+                $row = $result->fetch_array();  
+
+                return $row;
+    }
+
+
 }
     
 
