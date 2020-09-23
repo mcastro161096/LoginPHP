@@ -33,7 +33,7 @@ session_start();
                         <span class="input-group-addon">
                           <i class="glyphicon glyphicon-user"> </i>
                         </span>
-                        <input type="email" class="form-control input-lg" name="email" placeholder = "Informe seu Email"/>
+                        <input type="email" required class="form-control input-lg" name="email" placeholder = "Informe seu Email"/>
                         
                       </div>
                     </div>
@@ -42,7 +42,7 @@ session_start();
                         <span class="input-group-addon">
                           <i class="glyphicon glyphicon-lock"> </i>
                         </span>
-                        <input type="password" class="form-control input-lg" name="senha" placeholder = "Informe a senha"/>
+                        <input type="password" required class="form-control input-lg" name="senha" placeholder = "Informe a senha"/>
                         
                       </div>
                     </div>
