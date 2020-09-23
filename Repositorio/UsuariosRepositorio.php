@@ -11,7 +11,13 @@ class UsuarioRepositorio
                     $usuario->getSenha(), $usuario->getNome(), $usuario->getSobrenome(), $usuario->getDataNascimento(),
                          $usuario->getEscolaridade(), $usuario->getProfissao());
 
-          $query->execute();               
+          
+          if($query->execute()) 
+          {
+            return "Salvo com sucesso";
+          }    
+          else
+            return "Não foi posível salvar os dados";         
     }
 
     function VerificarCredenciais($login, $senha)

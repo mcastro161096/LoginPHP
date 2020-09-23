@@ -1,4 +1,4 @@
-drop table tb_usuarios;
+drop table dbphp7.Usuarios;
 
 SELECT * FROM Usuarios where Login = 'MATHEUSCASTRO161096@gmail.com' and Senha = '123';
 

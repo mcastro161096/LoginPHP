@@ -19,7 +19,7 @@ class Usuario
 
     private $DataCadastro;
 
-    public function Usuario($Login, $Senha, $Nome, $Sobrenome, $DataNascimento, $Escolaridade, $Profissao)
+    public function __construct( $Nome, $Sobrenome, $DataNascimento, $Escolaridade, $Profissao, $Login, $Senha)
     {
         $this->Login = $Login;
         $this->Senha = $Senha;
